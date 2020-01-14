@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style>
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Abel;
+  padding: 10px;
+  background: #f1f1f1;
+}
+
+
+.header {
+  padding: 30px;
+  text-align: left;
+  background: #D8D8D8;
+}
+
+.header h1 {
+  font-size: 50px;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #FFFFFF;
+}
+
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+
+.button_white {
+  background-color: #FFFFFF;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #000000;
+}
+
+.button_black {
+  background-color: #000000;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  color: #FFFFFF;
+}
+
+.white_text {
+  color: #FFFFFF;
+}
+.black_text {
+  color: #000000;
+}
+
+.little_block {
+  padding: 20px;
+  text-align: left;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+.item1 {
+  grid-area: myArea;
+}
+
+.main-container {
+      float: left;
+      position: relative;
+      left: 50%;
+    }
+.fixer-container {
+      float: left;
+      position: relative;
+      left: -50%;
+    }
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-areas: 'myArea myArea myArea';
+  grid-gap: 10px;
+  background-color: white;
+  padding: 10px;
+}
+
+.grid-container > div {
+  background-color: #D8D8D8;
+  text-align: left;
+  padding: 40px 20px;
+  font-size: 30px;
+}
+
+
+.grid-container2 {
+  display: grid;
+  grid-template-areas: 'myArea myArea';
+  
+  background-color: #D8D8D8;
+  padding: 10px;
+  grid-column-gap: 100px;
+  grid-row-gap: 100px;
+}
+
+.grid-container2 > div {
+  background-color: white;
+  text-align: left;
+  padding: 40px 20px;
+  font-size: 30px;
+}
+
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+#rectangle{
+	position: relative;
+    width:154px;
+    height:31px;
+    background:#D8D8D8;
+    float: right;
+    margin: 40px;
+}
+
+#rectangle2{
+	position: relative;
+    width:154px;
+    height:31px;
+    background:#D8D8D8;
+    margin: 40px;
+}
+
+#line{
+	position: relative;
+    width:1000px;
+    height:5px;
+    background:#FFFFFF;
+    margin: 0px;
+}
+
+
+h5 { font-weight:normal; }
+h4 { font-weight:normal; }
+h1 { font-weight:normal; }
+h2 { font-weight:normal; }
+
+
+#little_rectangle{
+	position: relative;
+    width:200px;
+    height:200px;
+    background:#D8D8D8;    
+    margin: 40px;
+}
+
+.big_rectangle{
+	position: relative;
+    width:500px;
+    height:500px;
+    background:#D8D8D8;    
+    margin: 40px;
+}
+
+
+#right { text-align: right; }
+
+#circle {
+  position: relative;
+  background-color: #D8D8D8;
+  margin: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 100px;
+  
+}
+
+#circle2 {
+  position: relative;
+  background-color: #D8D8D8;
+  margin: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 100px;
+
+}
+
+input[type=email], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #000000;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<div class="topnav">
+  <div id="circle" style="float: left;"></div>
+  <div id="rectangle"></div>
+  <div id="rectangle"></div>
+  <div id="rectangle"></div>
+  <div id="rectangle"></div>
+</div>
+
+
+<div class="header" style="background: #D8D8D8";>
+
+  <div class="header" style="margin: 10px background: #D8D8D8">
+    <h1 >Banner Header</h1>
+    <h2 >Lorem ipsum dolor sit amet</h2> 
+
+  <button class="button_white" style="margin: 10px">
+    white button
+  </button>
+
+  <button class="button_black" style="margin: 10px">
+     black button
+  </button>
+  </div>
+</div>
+
+
+
+<div class="topnav">
+<div class="grid-container">  
+  <div class="item2" style="background: white">
+    <div id="little_rectangle"></div>
+    <h2>Article Header</h2>
+    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</h5>
+  
+    <h6 style="color: #D8D8D8">Read more</h6>
+  </div>
+
+  <div class="item3" style="background: white"> 
+    <div id="little_rectangle"></div>
+    <h2>Article Header</h2>
+    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</h5>
+    <h6 style="color: #D8D8D8">Read more</h6>
+  </div> 
+
+  <div class="item4"  style="background: white">
+  	<div id="little_rectangle"></div>
+    <h2>Atricle Header</h2>
+    <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</h5>
+    <h6 style="color: #D8D8D8">Read more</h6>
+  </div> 
+  </div>  
+</div>
+
+
+
+<div class="header">
+  <center>
+    <h1>Sign Up for updates</h1>  
+    <form action="/action_page.php">    
+      <input type="email" id="fname" name="emailaddress" placeholder="Enter your email">     
+      <input type="submit" value="fill button">
+    </form>
+  </center>
+</div>
+
+
+
+
+
+<div class="topnav">
+  <div class="grid-container2" style="background: white">  
+    <div class="big_rectangle" style="background: white">    
+      <h2>ArticleHeader</h2>
+      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</h5>
+    </div>
+  
+    <div class="big_rectangle" style="background: #D8D8D8"></div>   
+    <div class="big_rectangle" style="background: #D8D8D8"></div> 
+
+    <div class="big_rectangle" style="background: white">    
+      <h2 id="right">ArticleHeader</h2>
+      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</h5>
+    </div>
+
+    <div class="big_rectangle" style="background: white">      
+      <h2>ArticleHeader</h2>
+      <h5>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation</h5>
+    </div>
+ 
+    <div class="big_rectangle" style="background: #D8D8D8"></div>
+  </div>
+</div>
+
+
+
+<div class="topnav">
+  <center>
+    <button class="button_black">
+       black button
+    </button>
+   </center>
+</div>
+
+
+<div class="header">
+  <center>
+    <div id="circle" style="background-color: white;"> </div>
+    <div id="rectangle2" style="background-color: white;display:inline-block"></div>
+    <div id="rectangle2" style="background-color: white; display:inline-block"></div>
+    <div id="rectangle2" style="background-color: white;display:inline-block"></div>
+    <div id="rectangle2" style="background-color: white; display:inline-block"></div>
+
+    <hr id="line" ></hr>
+
+    <br>
+    <br>
+    <br>
+
+    <img src="icons8-facebook-old.svg" alt="Cinque Terre" width="50" height="50" style="margin: 10px">
+    <img src="instagram-color-1.svg" alt="Cinque Terre" width="50" height="50" style="margin: 10px">
+  	<img src="linkedin-color-1.svg" alt="Cinque Terre" width="50" height="50" style="margin: 10px">
+    <img src="twitter-color-1.svg" alt="Cinque Terre" width="50" height="50" style="margin: 10px">    
+ 
+  </center>
+</div>
+
+</body>
+</html>
